@@ -1,0 +1,178 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .nav-links li {
+    display: inline;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .auth-buttons .btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+header .auth-buttons .btn.primary {
+    background-color: #0066ff;
+    border: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    padding: 4rem 2rem;
+    background-color: #80aaeb;
+    color: #000000;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.9rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.hero-content .btn.primary {
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 2rem;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+}
+
+.steps .step {
+    flex: 1;
+    padding: 1rem;
+}
+
+.steps .step img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.steps .step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer Section */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Upload File Section */
+.upload-section {
+    background-color: yellow; /* Set yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.file-upload {
+    margin: 10px 0;
+    position: relative;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for label */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button.btn.primary {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn.primary:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

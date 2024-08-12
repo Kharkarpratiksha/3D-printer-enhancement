@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printer Control</title>
+    <link rel="stylesheet" href="static\styles.css"> <!-- Flask way to link CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="3D Printer Logo"> <!-- Flask way to link logo -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="btn">Sign in</a>
+                <a href="#" class="btn primary">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Revolutionizing 3D Printing</h1>
+                <p>We enable remote print task management, eliminating manual data transfers. This streamlines printing, increases efficiency, and boosts flexibility. By reducing barriers, we foster innovation and accessibility. Our project enhances sustainability by minimizing waste and energy use. Future features may include real-time monitoring and cloud collaboration.</p>
+                <a href="#" class="btn primary">Check Status</a>
+            </div>
+            <div class="hero-image">
+                <img src="static\printer_image.jpg.png" alt="3D Printer Image"> <!-- Flask way to link image -->
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="{{ url_for('static', filename='wifi_icon.png') }}" alt="Connect to Wi-Fi">
+                    <h3>Connect to Wi-Fi</h3>
+                    <p>Ensure your wireless module is connected to your Wi-Fi network.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='browser_icon.png') }}" alt="Access the Web Interface">
+                    <h3>Access the Web Interface</h3>
+                    <p> Open a web browser and enter the IP address of your Raspberry Pi or ESP module.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='upload_icon.png') }}" alt="Upload Design Files">
+                    <h3>Upload Design Files</h3>
+                    <p>Go to the file upload section and upload your 3D design files.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='print_icon.png') }}" alt="Monitor Printing">
+                    <h3>Monitor Printing</h3>
+                    <p>Use the web interface to track the print progress and make adjustments as needed.</p>
+                </div>
+                <div class="step">
+                    <img src="{{ url_for('static', filename='print_icon.png') }}" alt="Start print job">
+                    <h3>Start Print Job</h3>
+                    <p>Select the uploaded file, configure print settings, and start the print remotely.</p>
+                </div>
+            </div>
+
+            <!-- Upload File Section -->
+            <h2>Upload Your Design File</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <input type="file" name="file" accept=".gcode" id="file-input">
+                    <label for="file-input" class="file-label">Choose File</label>
+        </div>
+        <button type="submit" class="btn primary">Upload File</button>
+    </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 3D Printer Control. All rights reserved.</p>
+    </footer>
+</body>
+</html>
